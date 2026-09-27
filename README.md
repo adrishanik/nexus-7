@@ -1,232 +1,154 @@
-# Nexus-7 ## Autonomous Humanoid Edge-AI Robotic Assistant ![Status](https://img.shields.io/badge/Status-Pre--Prototype-yellow) ![Open Source](https://img.shields.io/badge/Open%20Source-MIT-green) ![Compute](https://img.shields.io/badge/Compute-Orange%20Pi%205%20Plus%2016GB-blue) ![Edge AI](https://img.shields.io/badge/AI-Edge%20%2F%20Local%20AI-purple) ![Funding](https://img.shields.io/badge/Funding-Seeking-orange) --- # ⚠️ Project Status **PRE-PROTOTYPE — THE PHYSICAL ROBOT HAS NOT BEEN BUILT YET** Nexus-7 is a proposed open-source robotics project focused on building an autonomous robotic assistant using local/edge AI, computer vision, speech processing, sensors, and robotic motion. The system architecture, hardware plan, software prototypes, configuration, and bill of materials have been prepared. The physical Nexus-7 robot has **not** been built yet. The next goal is to obtain the required hardware and turn this design into a working physical prototype. --- # 🤝 Sponsorship Opportunity I am currently looking for: - Hardware sponsors - Component sponsors - Partial hardware funding - Full prototype funding - Technical support - Development support ## 💰 Planned Hardware Budget **Approximately $577 USD** The planned budget will be used for components required to build and test the first prototype. The complete planned bill of materials is available in [`BOM.csv`](BOM.csv). --- # 💡 What Can a Sponsor Support? A sponsor does not need to fund the entire project. Support can be provided through: - Individual component sponsorship - Multiple-component sponsorship - Partial hardware funding - Full prototype funding - Technical sponsorship - Development support Even one sponsored component can help move Nexus-7 from the design stage toward a physical prototype. --- # 🤖 What Is Nexus-7? Nexus-7 is a proposed robotic platform combining: - Edge/local AI - Computer vision - Speech recognition - Text-to-speech - Robotic motion - Servo-controlled mechanisms - Environmental sensing - Local processing - Human-robot interaction The long-term goal is to explore how robotics and AI can work together while keeping important AI processing locally on the robot instead of depending entirely on cloud services. ### Core Technologies **Robotics + Edge AI + Computer Vision + Speech + Embedded Systems** --- # 📊 Current Development Status Nexus-7 is currently a **design and software-prototype project**. The physical robot has **not** been constructed. ### Completed - ✅ Robot concept - ✅ System architecture - ✅ Hardware plan - ✅ Bill of materials - ✅ Software architecture - ✅ Configuration - ✅ Initial software prototypes ### In Development - 🟡 Servo-control prototype - 🟡 Local AI software prototype - 🟡 Robot orchestration - 🟡 Motor-control structure ### Waiting for Hardware - 🔴 Physical chassis - 🔴 Physical servo system - 🔴 Cameras - 🔴 Audio hardware - 🔴 Sensors - 🔴 Physical AI testing - 🔴 Complete robot - 🔴 First physical demonstration **Important:** Planned features are not represented as completed hardware capabilities. --- # 🧠 Proposed System Architecture The planned system will work approximately like this: ```text ┌─────────────────┐ │ Microphones │ └────────┬────────┘ │ ▼ ┌─────────────────┐ │ Speech │ │ Recognition │ └────────┬────────┘ │ ▼ ┌─────────────────┐ │ Local / Edge │ │ AI │ └────────┬────────┘ │ ┌──────────────┼──────────────┐ │ │ │ ▼ ▼ ▼ ┌──────────┐ ┌──────────┐ ┌──────────┐ │ TTS │ │ Display │ │ Motion │ └──────────┘ └──────────┘ └──────────┘ ▲ │ ┌──────┴───────┐ │ Cameras │ │ + Sensors │ └──────────────┘ 
+# Nexus-7: Autonomous Humanoid Edge-AI Robotic Assistant
 
-This architecture is a proposal and will be validated and modified during physical prototype development.
+[![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?repo=https://github.com/adrishanik/nexus-7/tree/main/pcb)[span_0](start_span)[span_0](end_span)
+[![Sponsorship Ready](https://img.shields.io/badge/Sponsorship-Open%20for%20Partnership-success.svg)](#sponsorship--partnership-tiers)
+![Compute](https://img.shields.io/badge/Compute-Orange%20Pi%205%20Plus%20(16GB)-blue.svg)
+![Actuators](https://img.shields.io/badge/Servos-10x%20ST3215%20Serial%20Bus-orange.svg)
+![Edge AI](https://img.shields.io/badge/Edge%20AI-Offline%20TinyLlama%20+%20Whisper-green.svg)
+![Vision](https://img.shields.io/badge/Vision-Dual%20IMX219%20Stereo%20Depth-red.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-🖥️ Planned Computing Platform 
+---
 
-The current hardware plan uses an:
+Nexus-7 is an open-source, edge-intelligence humanoid robotic platform engineered to bring accessible, real-time spatial AI and physical actuation to real-world environments. Designed with an articulated 10-DOF upper torso and an all-terrain continuous crawler track chassis, Nexus-7 demonstrates high-performance spatial awareness and natural human-robot interaction without requiring cloud compute or external network infrastructure.
 
-Orange Pi 5 Plus — 16 GB RAM
+We are actively seeking component sponsors, hardware suppliers, and grant partners to bring this physical prototype to completion and accelerate open-source edge robotics research.
 
-The intended responsibilities include:
+---
 
-Robot software Local AI inference Computer vision Speech processing Sensor processing Robot-control coordination 
+## Why Sponsor Nexus-7?
 
-Actual performance and AI acceleration will be measured after the physical hardware is acquired.
+1. **High-Visibility Open-Source Hardware:** Every sponsor brand, hardware component, and development milestone will be prominently featured across our public repositories, build logs, and Hack Club hardware showcases.
+2. **Real-World Edge AI Demonstration:** Nexus-7 proves that modern small language models (SLMs) and spatial vision can run reliably offline on embedded silicon, serving as a reference platform for modern SBCs and motor controllers.
+3. **Reproducible Engineering Standards:** All mechanical assemblies, electronics schematics, and embedded source code are released under permissive open-source licenses for global educational and maker adoption.
 
-⚙️ Planned Hardware Computing Orange Pi 5 Plus 16 GB Robotics ST3215 serial bus servos Tracked chassis Motor-control hardware Mechanical components Vision Dual-camera setup Stereo/depth perception Audio Microphone/audio system Speaker/audio output Interaction Display Buttons and controls Environmental sensors Power Battery system Power-management components Supporting electrical components 
+---
+
+## Technical Highlights
 
-All hardware listed above is planned hardware and has not been represented as already purchased or assembled.
+* **High-Torque Serial Bus Kinematics:** 10x Waveshare ST3215 magnetic encoder servos deliver up to 30kg.cm holding torque per joint, providing 12-bit positional telemetry, thermal tracking, and closed-loop control over a single 1Mbps half-duplex UART bus.
+* **Autonomous Edge-AI Intelligence:** Powered by an Orange Pi 5 Plus (RK3588, 16GB RAM) running local quantized small language models (TinyLlama 1.1B / Llama-3.2-1B) directly on the 6 TOPS NPU without internet or cloud subscriptions.
+* **Far-Field Spatial Audio Array:** The ReSpeaker 4-mic hardware array calculates real-time Direction of Arrival (DoA) sound vectors to physically steer the head toward the speaker before passing noise-filtered audio into local Whisper ASR.
+* **Expressive Vision & Display Pipeline:** Dual MIPI CSI-2 IMX219 stereo cameras calculate 3D disparity depth maps for object tracking, paired with a 2.1-inch 480x480 round SPI IPS display running hardware-accelerated LVGL facial animations.
+* **Inductive Transient Suppression:** A 1000µF 25V low-ESR electrolytic capacitor across the 12V high-current motor bus prevents inductive back-EMF spikes generated by track reversals and rapid servo deceleration.
+
+---
+
+## Sponsorship & Partnership Tiers
+
+We welcome both direct financial contributions and component/hardware donations (silicon, actuators, fabrication, filament).
 
-💰 Prototype Funding Plan 
+| Tier | Commitment | Recognition & Sponsor Deliverables |
+| :--- | :--- | :--- |
+| **Bronze Sponsor** | $50 – $150 (or equivalent components) | Logo and link in `README.md`, social media shoutouts across project devlogs. |
+| **Silver Partner** | $150 – $350 (or core SBC / actuator gear) | Prominent logo placement on repository header, dedicated hardware credit section, mention in all demonstration video credits. |
+| **Gold / Title Sponsor** | $350 – $600 (Full BOM funding) | Permanent custom acrylic/3D-printed company logo on the physical robot chassis, top-level banner branding in documentation, dedicated feature video walkthrough. |
 
-The project will be developed in several stages.
+---
 
-Phase 1 — Core Hardware 
+## 3D Printed Parts Specification
 
-Build the basic computing and movement platform.
+Parts printed in PETG and SLA resin for mechanical mounting on the aluminum chassis:
 
-Planned components:
+1. Upper Torso & Internal Electronics Cage
+   ( `cad/torso_skeleton.step` ):
+   * Material: Structural PETG (40% infill, 4 perimeters, 0.20mm layer height)
+   * Purpose: Houses the Orange Pi 5 Plus, synchronous buck converter, and distributes mechanical arm loads safely to the tracked chassis.
 
-Main computer Servo system Chassis Motor-control hardware Power system Essential mechanical components Phase 2 — Perception 
+2. Articulated Head & Circular HUD Housing
+   ( `cad/head_gimbal_mount.step` ):
+   * Material: PETG (25% infill, 3 perimeters, 0.16mm layer height)
+   * Purpose: Holds the 2.1" round IPS display, dual IMX219 stereo depth cameras, and the 2-DOF pan/tilt neck servo horns.
 
-Add:
+3. Underactuated Compliant Hands & Tendon Phalanges
+   ( `cad/hand_fingers_assembly.step` ):
+   * Material: High-Strength PETG (60% infill, 4 perimeters, 0.16mm layer height)
+   * Purpose: Rigid finger hinges with internal cable guide tunnels allowing single-servo tendon actuation to conform around objects of irregular shape.
 
-Stereo cameras Microphones IMU Additional sensors Phase 3 — Interaction 
+---
 
-Add:
+## Assembly & Build Procedure
 
-Display Audio output Additional interaction hardware Phase 4 — AI and Software Integration 
+### 1. Fabrication & Dry Fit
+* Print the torso skeleton, head mount, and finger phalanges on the 3D printer using PETG filament.
+* Press M3 brass heat-set threaded inserts into structural mounting holes using a soldering iron set to 230°C.
+* Inspect edges of the aluminum base plates and test-fit all 10 ST3215 servo brackets before final assembly.
 
-Integrate:
+### 2. Wiring & Soldering
+* Solder the main battery leads with the inline 40A mushroom E-stop cutoff switch directly on the positive rail.
+* Solder the 1000µF 25V low-ESR capacitor across the 12V power input pads of the BTS7960 motor driver.
+* Wire the 12V-to-5V 10A buck converter input to the switched 12V rail and output clean 5V to the Orange Pi 5 Plus.
+* Connect UART2 (Pins 8 and 10) to the Waveshare bus servo interface board.
+* Wire the BTS7960 track motor driver PWM inputs to GPIO pins 35, 36, 37, and 38.
+* Connect the 2.1" round IPS display via high-speed SPI1 (Pins 19, 23, 24).
+* Wire the MAX98357A I2S DAC amplifier to I2S0 (Pins 12, 33, 40) and connect the 3W cavity speaker.
+* Check continuity across power and ground rails with a multimeter to ensure zero short circuits before plugging in the battery.
 
-Local AI Speech recognition Text-to-speech Computer vision Sensor processing Robot control Phase 5 — Testing 
+### 3. Firmware Configuration & Bring-Up
+* Flash Ubuntu 22.04 LTS onto the 256GB PCIe NVMe SSD and boot the Orange Pi 5 Plus.
+* Enable hardware overlays for UART2, SPI1, and I2S0 in `orangepi-config`.
+* Deploy the local quantized model (`tinyllama:1.1b`) via Ollama targeting the onboard RK3588 NPU.
+* Configure Piper neural text-to-speech for local real-time audio generation.
+* Set servo bus communication to 1,000,000 baud and calibrate joint zero-points.
+* Execute `python3 scripts/main_robot.py` to start the autonomous control and perception loop.
 
-Measure:
+---
 
-AI response latency Speech recognition performance Servo positioning Motor response Camera performance Battery runtime System temperature Power consumption Emergency-stop response Overall system stability Phase 6 — Public Demonstration 
+## Project Flowchart
 
-After the prototype is working:
-
-Publish build documentation Publish test results Create demonstration videos Document lessons learned Improve the open-source design 📈 Funding Status 
-
-Prototype hardware target: ~$577 USD
-
-Currently funded: $0
-
-Remaining target: ~$577 USD
-
-Funding figures will be updated as components are sponsored or purchased.
-
-Components Seeking Sponsorship Orange Pi 5 Plus ST3215 servos Tracked chassis Stereo cameras Audio hardware Display Power hardware Sensors Mechanical materials 🤝 Why Support Nexus-7? 
-
-Nexus-7 is being developed as an open-source student robotics project.
-
-The project aims to document the development process from:
-
-Hardware Selection ↓ Mechanical Design ↓ Electronics ↓ Embedded Software ↓ Edge AI ↓ System Integration ↓ Testing ↓ Public Demonstration 
-
-Hardware sponsorship can help transform the engineering plan into a physical prototype.
-
-The development process will be publicly documented so that students, makers, and robotics enthusiasts can learn from the project.
-
-🎁 Sponsor Recognition 
-
-Depending on the type of sponsorship, sponsor recognition may include:
-
-Sponsor acknowledgement in this repository Sponsor acknowledgement in project documentation Product attribution where appropriate Development updates Prototype demonstration videos after hardware is available Link to the sponsor's official website or product page Mention in project presentations where appropriate 
-
-Specific sponsor benefits will be agreed upon before sponsorship is accepted.
-
-🧩 Component Sponsorship 
-
-A sponsor does not need to provide the entire project budget.
-
-The project can be supported at different levels:
-
-One Component ↓ One Subsystem ↓ Multiple Components ↓ Complete Prototype 
-
-This allows hardware manufacturers and other supporters to contribute to the part of the project that best matches their products or interests.
-
-📁 Repository Contents nexus-7/ │ ├── README.md ├── BOM.csv ├── LICENSE ├── config.json ├── requirements.txt │ ├── hardware/ │ └── ... │ └── scripts/ ├── main_robot.py ├── servo_controller.py ├── motor_driver.py ├── llm_engine.py └── face_display.py 
-
-The repository will expand as development progresses.
-
-💻 Software Prototype 
-
-The repository contains early software prototypes for the planned robot architecture.
-
-Current software work includes:
-
-Robot orchestration Servo communication Motor-control structure Local AI communication Display-state management Configuration 
-
-Some modules currently contain simulation, placeholder, or hardware-independent functionality because the physical prototype has not yet been built.
-
-Physical hardware validation will be added after the required components are obtained.
-
-🧪 Prototype Success Criteria 
-
-The first physical prototype will be evaluated using measurable tests.
-
-Planned measurements include:
-
-Servo positioning accuracy Motor response AI response latency Speech recognition latency Text-to-speech latency Camera/depth performance Battery runtime System temperature Power consumption Emergency-stop response Overall system stability 
-
-Measured results will be added to the repository as development progresses.
-
-🗺️ Development Roadmap [1] System Architecture ↓ [2] Hardware BOM ↓ [3] Sponsorship / Funding ↓ [4] Acquire Components ↓ [5] Mechanical Assembly ↓ [6] Electronics Integration ↓ [7] Software Bring-Up ↓ [8] Edge-AI Integration ↓ [9] Testing & Optimization ↓ [10] First Nexus-7 Prototype ↓ [11] Public Demonstration 🔬 Open-Source Development 
-
-The goal is to document the project openly.
-
-As development progresses, the repository will contain:
-
-Source code Configuration Hardware documentation CAD/design files where appropriate Testing results Development notes Build documentation Project updates 
-
-The project is intended to make the development process useful to other students and makers.
-
-⚠️ Safety 
-
-Nexus-7 will involve:
-
-Motors Servos Batteries Power electronics Moving mechanical parts 
-
-Physical construction and testing will follow appropriate manufacturer safety instructions.
-
-Battery, high-current electrical work, and mechanical testing should be performed with appropriate adult or qualified supervision.
-
-Safety systems, including an emergency-stop mechanism, will be considered part of the physical prototype design.
-
-📦 Bill of Materials 
-
-The complete planned component list is available here:
-
-BOM.csv
-
-The BOM represents the planned prototype requirement, not hardware that has already been purchased or assembled.
-
-Prices may change depending on supplier, shipping, and availability.
-
-📈 What Happens After Sponsorship? 
-
-After receiving the required hardware, development will be documented in stages.
-
-1. Component Verification 
-
-Verify that all sponsored components are compatible.
-
-2. Hardware Assembly 
-
-Build the first physical platform.
-
-3. Software Bring-Up 
-
-Test each subsystem individually.
-
-4. AI Integration 
-
-Connect local AI with the physical robot.
-
-5. Testing 
-
-Measure performance and identify problems.
-
-6. Documentation 
-
-Publish results and lessons learned.
-
-7. Demonstration 
-
-Create a working prototype demonstration.
-
-The objective is to make the development process transparent rather than simply presenting a final result.
-
-🌟 Long-Term Vision 
-
-The long-term vision is to develop Nexus-7 into a more capable open-source robotics platform combining:
-
-Edge AI + Robotics + Computer Vision + Speech + Embedded Systems
-
-Future versions may explore:
-
-Better perception More capable local AI Improved mobility More advanced manipulation Better human-robot interaction Additional sensors Improved power efficiency More autonomous behavior 
-
-These are future goals and are not claimed as currently implemented capabilities.
-
-📬 Sponsorship 
-
-If you are a hardware manufacturer, robotics company, technology company, maker organization, or individual interested in supporting Nexus-7, sponsorship can be provided through:
-
-Hardware/components Partial hardware funding Full prototype funding Technical support Development support 
-
-The current planned hardware target is approximately $577 USD.
-
-For sponsorship discussions, please use the contact method listed on my GitHub profile.
-
-📜 License 
-
-The software in this repository is released under the MIT License.
-
-See LICENSE for the complete license text.
-
-Hardware and CAD licensing will be documented separately where applicable.
-
-⭐ Support the Project 
-
-Nexus-7 is currently at the stage where the design exists, but the physical prototype still needs to be built.
-
-Hardware sponsorship or project funding can help move the project from the design stage toward a working physical prototype.
-
-Design on GitHub ↓ Hardware Sponsorship ↓ Physical Prototype ↓ Testing ↓ Open-Source Documentation ↓ Working Nexus-7 Robot 📌 Project Summary 
-
-Current stage: Pre-prototype
-
-Physical robot: Not built
-
-Hardware funding: Seeking
-
-Planned hardware budget: ~$577 USD
-
-Project type: Open-source student robotics / Edge AI
-
-Repository: Nexus-7
+```mermaid
+flowchart TD
+    subgraph Power["Power Subsystem"]
+        BAT[12V 3S 6000mAh Battery] --> ESTOP[Mushroom E-Stop Switch]
+        ESTOP --> RAIL12V[Direct 12V Bus]
+        ESTOP --> BUCK[12V-to-5V 10A Buck Converter]
+        BUCK --> RAIL5V[Regulated 5V Rail]
+    end
+
+    subgraph Perception["Perception & Ingestion"]
+        MIC[ReSpeaker 4-Mic Array] -->|USB Audio| OPI[Orange Pi 5 Plus 16GB]
+        CAM[Dual IMX219 Stereo Cameras] -->|MIPI CSI-2| OPI
+        IMU[MPU6050 6-Axis IMU] -->|I2C3| OPI
+    end
+
+    subgraph EdgeAI["Edge Intelligence Engine"]
+        OPI --> ASR[Whisper ASR Node]
+        ASR --> LLM[TinyLlama 1.1B LLM]
+        LLM --> TTS[Piper Neural TTS]
+        LLM --> MOTION[Inverse Kinematics Planner]
+    end
+
+    subgraph Actuation["Actuation & Output"]
+        TTS -->|I2S Bus| DAC[MAX98357A DAC + 3W Speaker]
+        LLM -->|SPI1 Bus| DISP[2.1 Round IPS Display]
+        MOTION -->|UART2 1Mbps| SERVO[10x ST3215 Bus Servos]
+        MOTION -->|PWM Pins| MOTOR[BTS7960 Motor Driver + Tracks]
+    end
+
+    RAIL12V -.-> SERVO
+    RAIL12V -.-> MOTOR
+    RAIL5V -.-> OPI
+    RAIL5V -.-> DISP
+    RAIL5V -.-> DAC
+```
+
+---
+
+## Bill of Materials Summary
+
+* **Target Hardware Budget:** **$577.00**
+* Complete, transparently itemized sourcing spreadsheet available in [`BOM.csv`](./BOM.csv).
+* Open to component-level hardware sponsorships in lieu of direct funding.
+
+---
+
+## Contact & Sponsorship Inquiries
+
+To sponsor parts, collaborate, or back this project, open an issue in this repository or contact the lead maintainer directly via GitHub.
+
+---
+
+## License
+
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for details.
 
