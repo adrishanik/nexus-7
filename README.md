@@ -1,110 +1,42 @@
-# Nexus-7: Autonomous Humanoid Edge-AI Robotic Assistant
+# Nexus-7: Autonomous Humanoid Edge-AI Robotic Assistant ![Project Status](https://img.shields.io/badge/Status-Pre--Prototype-yellow) ![Open Source](https://img.shields.io/badge/Open%20Source-MIT-green) ![Compute](https://img.shields.io/badge/Compute-Orange%20Pi%205%20Plus%2016GB-blue) ![Edge AI](https://img.shields.io/badge/AI-Edge%20%2F%20Local%20AI-purple) ![Funding](https://img.shields.io/badge/Funding-Seeking-orange) > **PRE-PROTOTYPE — THE PHYSICAL ROBOT HAS NOT BEEN BUILT YET** Nexus-7 is a proposed open-source robotics project focused on building an autonomous robotic assistant using local/edge AI, computer vision, speech processing, sensors, and robotic motion. The system architecture, hardware plan, software prototypes, configuration, and bill of materials have been prepared. The physical Nexus-7 robot has **not** been built yet. The next goal is to obtain the required hardware and turn this design into a working physical prototype. --- ## 🚀 Sponsorship Opportunity I am currently looking for: - Hardware sponsors - Component sponsors - Partial hardware funding - Full prototype funding - Technical/project support ### 💰 Planned Hardware Budget **Approximately $577 USD** The planned budget covers components such as: - Edge-AI computing hardware - ST3215 bus servos - Tracked chassis - Stereo cameras - Microphone/audio hardware - Display - Motor-control electronics - Battery and power components - Sensors - Mechanical and 3D-printing materials - Wiring and supporting components The complete planned bill of materials is available in [`BOM.csv`](BOM.csv). --- # 🤖 What Is Nexus-7? Nexus-7 is designed as a compact robotic platform combining: - Edge/local AI - Computer vision - Speech recognition - Text-to-speech - Robotic motion - Servo-controlled mechanisms - Environmental sensing - Local processing - Human-robot interaction The long-term goal is to explore how robotics and AI can work together while keeping important AI processing locally on the robot instead of depending entirely on cloud services. ### Core Areas **Robotics + Edge AI + Computer Vision + Speech + Embedded Systems** --- # ⚠️ Current Project Status Nexus-7 is currently a **design and software-prototype project**. The physical robot has **not** been constructed. ### Current Progress - ✅ Robot concept designed - ✅ System architecture prepared - ✅ Hardware plan prepared - ✅ Bill of materials prepared - ✅ Software architecture started - ✅ Configuration prepared - 🟡 Servo-control prototype - 🟡 Local AI software prototype - 🟡 Robot orchestration prototype - 🟡 Motor-control structure - 🔴 Physical chassis not built - 🔴 Servos not acquired - 🔴 Cameras not acquired - 🔴 Audio hardware not acquired - 🔴 Physical AI testing not started - 🔴 Complete robot not built > Planned features are not represented as completed hardware capabilities. --- # 🧠 Proposed System Architecture The planned system will follow an architecture similar to: ```text ┌─────────────────┐ │ Microphones │ └────────┬────────┘ │ ▼ ┌─────────────────┐ │ Speech │ │ Recognition │ └────────┬────────┘ │ ▼ ┌─────────────────┐ │ Local / Edge AI │ └────────┬────────┘ │ ┌──────────────┼──────────────┐ ▼ ▼ ▼ ┌─────────┐ ┌─────────┐ ┌─────────┐ │ TTS │ │ Display │ │ Motion │ └─────────┘ └─────────┘ └─────────┘ ▲ │ ┌──────┴───────┐ │ Cameras / │ │ Sensors │ └──────────────┘ 
 
-[![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?repo=https://github.com/adrishanik/nexus-7/tree/main/pcb)
+This architecture is a proposal and will be validated and modified during physical prototype development.
 
-![Tier](https://img.shields.io/badge/Stardance%20Tier-X--Tier%20($578)-purple.svg)
-![Compute](https://img.shields.io/badge/SBC-Orange%20Pi%205%20Plus%20(16GB)-blue.svg)
-![Actuators](https://img.shields.io/badge/Servos-10x%20ST3215%20Serial%20Bus-orange.svg)
-![Edge AI](https://img.shields.io/badge/Edge%20AI-Offline%20TinyLlama%20+%20Whisper-green.svg)
-![Vision](https://img.shields.io/badge/Vision-Dual%20IMX219%20Stereo%20Depth-red.svg)
+🖥️ Planned Computing Platform 
 
+The current hardware plan uses an:
 
+Orange Pi 5 Plus — 16 GB RAM
 
-Project Status: PRE-PROTOTYPE — PHYSICAL ROBOT NOT YET BUILT
-
-Nexus-7 is a proposed open-source robotics project focused on building an autonomous robotic assistant powered by local/edge AI.
-
-The architecture, hardware plan, software prototypes, configuration and bill of materials have been prepared. However, the physical Nexus-7 prototype has not yet been built.
-
-The next step is to obtain the hardware required to turn this design into a working prototype.
-
-## 🚀 Sponsorship Opportunity 
-
-I am currently looking for hardware sponsors, component sponsors and project funding to build the first Nexus-7 prototype.
-
-Funding target 
-
-Planned hardware budget: approximately $577 USD
-
-The funding will be used for the components required to build and test the prototype, including:
-
-Edge-AI computing hardware High-torque bus servos Tracked chassis Stereo cameras Microphone/audio hardware Display Motor-control electronics Battery and power components Sensors Mechanical and 3D-printing materials Wiring and supporting components 
-
-The complete planned bill of materials is available in BOM.csv.
-
-## 💡 Sponsors can support 
-
-A sponsor does not necessarily need to fund the entire project.
-
-Support can be provided through:
-
-Individual component sponsorship Multiple-component sponsorship Partial hardware funding Full prototype funding Technical sponsorship Development/project support 
-
-Every sponsored component can help move the project from the design stage toward a physical prototype.
-
-## 🤖 What Is Nexus-7? 
-
-Nexus-7 is designed as a compact robotic platform combining:
-
-Edge/local AI Computer vision Speech recognition Text-to-speech Robotic motion Servo-controlled mechanisms Environmental sensing Local processing Human-robot interaction 
-
-The long-term goal is to create a robot that can process important AI functions locally rather than depending entirely on cloud services.
-
-The project is intended to explore the combination of:
-
-Robotics + Edge AI + Computer Vision + Speech + Embedded Systems
-
-## ⚠️ Important Project Status 
-
-Nexus-7 is currently a design and software-prototype project.
-
-The physical robot has not been constructed yet.
-
-Component / Feature Status Overall robot concept ✅ Designed System architecture ✅ Designed Hardware BOM ✅ Prepared Software architecture ✅ Prepared Configuration ✅ Prepared Servo-control prototype 🟡 Prototype Local AI software prototype 🟡 Prototype Robot orchestration 🟡 Prototype Motor hardware integration 🔵 Planned Physical chassis 🔴 Not built Physical servo system 🔴 Not built Cameras 🔴 Not acquired Audio hardware 🔴 Not acquired Physical AI testing 🔴 Not started Complete robot 🔴 Not built First prototype demonstration 🔴 Requires funding 
-
-Planned features are not represented as completed hardware capabilities.
-
-## 🧠 Proposed System Architecture 
-
-The planned system will follow an architecture similar to:
-
-┌─────────────────────┐ │ Microphones │ └──────────┬──────────┘ │ ▼ ┌─────────────────────┐ │ Speech Recognition │ └──────────┬──────────┘ │ ▼ ┌─────────────────────┐ │ Local / Edge │ │ AI │ └──────────┬──────────┘ │ ┌──────────┼──────────┐ ▼ ▼ ▼ ┌───────┐ ┌───────┐ ┌────────┐ │ TTS │ │Display│ │ Motion │ └───────┘ └───────┘ └────────┘ ▲ │ ┌──────────┴──────────┐ │ Cameras / Sensors │ └─────────────────────┘ 
-
-This architecture will be validated and modified during physical prototype development.
-
-## 🖥️ Planned Computing Platform 
-
-The current hardware plan uses an Orange Pi 5 Plus with 16 GB RAM as the main computing platform.
-
-The intended role of the computer is to handle:
+The intended computer responsibilities include:
 
 Robot software Local AI inference Computer vision Speech processing Sensor processing Robot-control coordination 
 
 Actual performance and AI acceleration will be measured after the physical hardware is acquired.
 
-## ⚙️ Planned Hardware 
+⚙️ Planned Hardware 
 
-The current BOM contains the major components required for the first prototype.
+The first prototype is planned to include:
 
-Hardware Planned Purpose Status Orange Pi 5 Plus 16 GB Main edge-computing platform Seeking ST3215 bus servos Robotic movement/mechanisms Seeking Tracked chassis Robot mobility Seeking Stereo cameras Vision/depth perception Seeking Microphone/audio system Voice input Seeking Display Human-robot interaction Seeking Motor-control hardware Chassis movement Seeking Battery/power hardware Portable operation Seeking Sensors Environment and robot state Seeking Mechanical materials Physical construction Seeking 
+Computing Orange Pi 5 Plus 16 GB Robotics ST3215 serial bus servos Tracked chassis Motor-control hardware Mechanical components Vision Dual-camera setup Stereo/depth perception Audio Microphone/audio system Speaker/audio output Interaction Display Buttons and controls Environmental sensors Power Battery system Power-management components Supporting electrical components 
 
-See BOM.csv for the detailed planned bill of materials.
+All hardware listed above is planned hardware, not hardware that has already been purchased or assembled.
 
-## 💰 Prototype Funding Plan 
+💰 Prototype Funding Plan 
 
-The project is planned in several stages so that sponsorship can support the project progressively.
+The project can be developed in stages.
 
 Phase 1 — Core Hardware 
 
-Build the fundamental computing and movement platform.
+Build the basic computing and movement platform.
 
-Target:
+Planned components:
 
 Main computer Servo system Chassis Motor-control hardware Power system Essential mechanical components Phase 2 — Perception 
 
 Add:
 
-Stereo cameras Microphones IMU and other sensors Phase 3 — Interaction 
+Stereo cameras Microphones IMU Additional sensors Phase 3 — Interaction 
 
 Add:
 
@@ -112,11 +44,11 @@ Display Audio output Additional interaction hardware Phase 4 — AI and Software
 
 Integrate:
 
-Local AI Speech recognition Text-to-speech Vision Sensor processing Robot control Phase 5 — Testing 
+Local AI Speech recognition Text-to-speech Computer vision Sensor processing Robot control Phase 5 — Testing 
 
 Measure:
 
-AI response latency Speech recognition performance Servo positioning Motor response Camera performance Battery runtime System temperature Safety-system response Phase 6 — Public Demonstration 
+AI response latency Speech recognition performance Servo positioning Motor response Camera performance Battery runtime System temperature Power consumption Emergency-stop response Overall system stability Phase 6 — Public Demonstration 
 
 After the prototype is working:
 
@@ -126,57 +58,53 @@ Prototype hardware target: ~$577 USD
 
 Currently funded: $0
 
-Remaining target: ~$577
+Remaining target: ~$577 USD
 
 Funding figures will be updated as components are sponsored or purchased.
 
-Sponsored Components Component Sponsor Status Orange Pi 5 Plus — Seeking sponsor ST3215 servos — Seeking sponsor Chassis — Seeking sponsor Cameras — Seeking sponsor Audio hardware — Seeking sponsor Display — Seeking sponsor Power hardware — Seeking sponsor Sensors — Seeking sponsor 🤝 Why Sponsor Nexus-7? 
+Sponsored Components Orange Pi 5 Plus — Seeking sponsor ST3215 servos — Seeking sponsor Chassis — Seeking sponsor Cameras — Seeking sponsor Audio hardware — Seeking sponsor Display — Seeking sponsor Power hardware — Seeking sponsor Sensors — Seeking sponsor 🤝 Why Sponsor Nexus-7? 
 
 Nexus-7 is being developed as an open-source student robotics project.
 
-The project aims to document the complete development process, from:
+The project aims to document the development process from:
 
-Hardware selection → Mechanical design → Electronics → Embedded software → Edge AI → System integration → Testing
+Hardware Selection ↓ Mechanical Design ↓ Electronics ↓ Embedded Software ↓ Edge AI ↓ System Integration ↓ Testing ↓ Public Demonstration 
 
 A hardware sponsor can help transform a detailed engineering plan into a physical prototype.
 
-The project will be publicly documented so that other students, makers and robotics enthusiasts can learn from the development process.
+The development process will be publicly documented so that other students, makers, and robotics enthusiasts can learn from the project.
 
-## 🎁 Sponsor Recognition 
+🎁 Sponsor Recognition 
 
 Depending on the type and size of sponsorship, sponsor recognition can include:
 
-Sponsor acknowledgement in this repository Sponsor acknowledgement in project documentation Sponsor/product attribution where appropriate Development updates Prototype demonstration videos after hardware is available Links to the sponsor's official website or product page Mention in project presentations where appropriate 
+Sponsor acknowledgement in this repository Sponsor acknowledgement in project documentation Product attribution where appropriate Development updates Prototype demonstration videos after hardware is available Link to the sponsor's official website or product page Mention in project presentations where appropriate 
 
 Specific sponsor benefits will be agreed upon with each sponsor before sponsorship is accepted.
 
-## 🧩 Component Sponsorship 
+🧩 Component Sponsorship 
 
-A sponsor does not need to provide the entire $577 budget.
+A sponsor does not need to provide the entire project budget.
 
-For example, a company could sponsor:
+Support can be provided through:
 
-One component ↓ One subsystem ↓ Multiple components ↓ Complete prototype 
+One Component ↓ One Subsystem ↓ Multiple Components ↓ Complete Prototype 
 
-This allows companies and hardware manufacturers to support the part of the project that best matches their products or interests.
+This allows hardware manufacturers and other supporters to contribute to the part of the project that best matches their products or interests.
 
-## 🛠️ Repository Contents nexus-7/ │ ├── README.md ├── BOM.csv ├── LICENSE ├── config.json ├── requirements.txt │ ├── hardware/ │ └── ... │ └── scripts/ ├── main_robot.py ├── servo_controller.py ├── motor_driver.py ├── llm_engine.py └── face_display.py 
-
-The repository will expand as the physical prototype is developed.
-
-## 💻 Software Prototype 
+💻 Software Prototype 
 
 The repository contains early software prototypes for the planned robot architecture.
 
-Current software work includes prototypes for:
+Current software work includes:
 
 Robot orchestration Servo communication Motor-control structure Local AI communication Display-state management Configuration 
 
-Some modules currently contain simulation, placeholder or hardware-independent functionality because the physical prototype has not yet been built.
+Some modules currently contain simulation, placeholder, or hardware-independent functionality because the physical prototype has not yet been built.
 
 Physical hardware validation will be added after the required components are obtained.
 
-## 🧪 Prototype Success Criteria 
+🧪 Prototype Success Criteria 
 
 The first physical prototype will be evaluated using measurable tests rather than only visual demonstrations.
 
@@ -186,7 +114,7 @@ Servo positioning accuracy Motor response AI response latency Speech recognition
 
 Measured results will be added to the repository as development progresses.
 
-🗺️ Development Roadmap [1] System Architecture │ ▼ [2] Hardware BOM │ ▼ [3] Sponsorship / Funding │ ▼ [4] Acquire Components │ ▼ [5] Mechanical Assembly │ ▼ [6] Electronics Integration │ ▼ [7] Software Bring-Up │ ▼ [8] Edge-AI Integration │ ▼ [9] Testing & Optimization │ ▼ [10] First Nexus-7 Prototype │ ▼ [11] Public Demonstration 🔬 Open-Source Development 
+🗺️ Development Roadmap [1] System Architecture ↓ [2] Hardware BOM ↓ [3] Sponsorship / Funding ↓ [4] Acquire Components ↓ [5] Mechanical Assembly ↓ [6] Electronics Integration ↓ [7] Software Bring-Up ↓ [8] Edge-AI Integration ↓ [9] Testing & Optimization ↓ [10] First Nexus-7 Prototype ↓ [11] Public Demonstration 🔬 Open-Source Development 
 
 The goal is to document the project openly.
 
@@ -196,7 +124,7 @@ Source code Configuration Hardware documentation CAD/design files where appropri
 
 The project is intended to make the development process useful to other students and makers.
 
-## ⚠️ Safety 
+⚠️ Safety 
 
 Nexus-7 will involve:
 
@@ -204,11 +132,11 @@ Motors Servos Batteries Power electronics Moving mechanical parts
 
 Physical construction and testing will follow appropriate manufacturer safety instructions.
 
-Battery, high-current electrical work and mechanical testing will be performed with appropriate adult or qualified supervision.
+Battery, high-current electrical work, and mechanical testing should be performed with appropriate adult or qualified supervision.
 
 Safety systems, including an emergency-stop mechanism, will be considered part of the physical prototype design.
 
-## 📦 Bill of Materials 
+📦 Bill of Materials 
 
 The complete planned component list is available here:
 
@@ -216,25 +144,25 @@ BOM.csv
 
 The BOM represents the planned prototype requirement, not hardware that has already been purchased or assembled.
 
-Prices may change depending on supplier, shipping and availability.
+Prices may change depending on supplier, shipping, and availability.
 
-## 📈 What Happens After Sponsorship? 
+📈 What Happens After Sponsorship? 
 
-After receiving the required hardware, the development process will be documented in stages:
+After receiving the required hardware, development will be documented in stages.
 
-1. Component verification 
+1. Component Verification 
 
 Verify that all sponsored components are compatible.
 
-2. Hardware assembly 
+2. Hardware Assembly 
 
 Build the first physical platform.
 
-3. Software bring-up 
+3. Software Bring-Up 
 
 Test each subsystem individually.
 
-4. AI integration 
+4. AI Integration 
 
 Connect local AI with the physical robot.
 
@@ -252,7 +180,7 @@ Create a working prototype demonstration.
 
 The objective is to make the development process transparent rather than simply presenting a final result.
 
-## 🌟 Long-Term Vision 
+🌟 Long-Term Vision 
 
 The long-term vision is to develop Nexus-7 into a more capable open-source robotics platform combining:
 
@@ -264,17 +192,17 @@ Better perception More capable local AI Improved mobility More advanced manipula
 
 These are future goals and are not claimed as currently implemented capabilities.
 
-## 📬 Sponsorship 
+📬 Sponsorship 
 
-If you are a hardware manufacturer, robotics company, technology company, maker organization or individual interested in supporting Nexus-7, sponsorship can be provided through:
+If you are a hardware manufacturer, robotics company, technology company, maker organization, or individual interested in supporting Nexus-7, sponsorship can be provided through:
 
 Hardware/components Partial hardware funding Full prototype funding Technical support Development support 
 
-The current hardware target is approximately $577 USD.
+The current planned hardware target is approximately $577 USD.
 
-For sponsorship discussions, please contact me through the contact method listed on my GitHub profile.
+For sponsorship discussions, please use the contact method listed on my GitHub profile.
 
-## 📜 License 
+📜 License 
 
 The software in this repository is released under the MIT License.
 
@@ -282,24 +210,24 @@ See LICENSE for the complete license text.
 
 Hardware and CAD licensing will be documented separately where applicable.
 
-## ⭐ Support the Project 
+⭐ Support the Project 
 
 Nexus-7 is currently at the stage where the design exists, but the physical prototype still needs to be built.
 
-If you are interested in helping turn the design into a real robot, hardware sponsorship or project funding can directly support the next stage of development.
+Hardware sponsorship or project funding can help move the project from the design stage toward a working physical prototype.
 
-From a design on GitHub → to a working physical robot.
-
-Project Status 
+Design on GitHub ↓ Hardware Sponsorship ↓ Physical Prototype ↓ Testing ↓ Open-Source Documentation ↓ Working Nexus-7 Robot 📌 Project Status 
 
 Current stage: Pre-prototype
+
 Physical robot: Not built
+
 Hardware funding: Seeking
+
 Planned hardware budget: ~$577 USD
+
 Project type: Open-source student robotics / Edge AI
+
 Repository: Nexus-7
 
-
-
-
-
+::: 
