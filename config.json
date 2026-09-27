@@ -1,0 +1,36 @@
+{
+  "robot_name": "Nexus-7",
+  "version": "1.0.0",
+  "hardware": {
+    "servo_serial_port": "/dev/ttyS2",
+    "servo_baudrate": 1000000,
+    "spi_bus": 1,
+    "spi_device": 0,
+    "i2c_bus": 3,
+    "imu_address": "0x68"
+  },
+  "servos": {
+    "neck_pan_id": 1,
+    "neck_tilt_id": 2,
+    "left_shoulder_pitch_id": 3,
+    "left_shoulder_roll_id": 4,
+    "left_elbow_id": 5,
+    "left_gripper_id": 6,
+    "right_shoulder_pitch_id": 7,
+    "right_shoulder_roll_id": 8,
+    "right_elbow_id": 9,
+    "right_gripper_id": 10
+  },
+  "motor_driver": {
+    "left_rpwm": 35,
+    "left_lpwm": 36,
+    "right_rpwm": 37,
+    "right_lpwm": 38
+  },
+  "llm": {
+    "model_name": "tinyllama:1.1b",
+    "ollama_api_url": "http://127.0.0.1:11434/api/generate",
+    "temperature": 0.7,
+    "max_tokens": 128
+  }
+}
