@@ -1,0 +1,20 @@
+Item,Part Description,Quantity,Vendor / Sourcing,Unit Price (USD),Total Price (USD)
+1,Orange Pi 5 Plus 16GB SBC (RK3588 6 TOPS NPU),1,AliExpress Orange Pi Official,145.00,145.00
+2,256GB M.2 PCIe NVMe SSD,1,Amazon India,24.00,24.00
+3,Waveshare ST3215 30kg.cm High-Torque Serial Bus Servos,10,Waveshare / Robu.in,14.50,145.00
+4,Waveshare Bus Servo Driver Interface Board,1,Waveshare / Robu.in,16.00,16.00
+5,Metal-Gear Crawler Track Chassis with Dual 12V Motors,1,Robu.in / MakerBazar,55.00,55.00
+6,BTS7960 43A Dual High-Power DC Motor Driver Module,1,Robu.in,10.00,10.00
+7,MPU6050 6-Axis I2C Gyroscope and Accelerometer,1,Robu.in,4.00,4.00
+8,Dual IMX219 Binocular Stereo Camera Depth Module,1,Robu.in / Waveshare,36.00,36.00
+9,2.1-inch Round IPS Display (480x480 SPI),1,Waveshare / MakerBazar,26.00,26.00
+10,ReSpeaker 4-Mic Array with Far-Field Audio,1,Seeed / Robu.in,24.00,24.00
+11,MAX98357A I2S Class-D DAC + 3W Enclosed Speaker,1,Robu.in,8.00,8.00
+12,12V 6000mAh 3S Li-ion Battery Pack with Integrated BMS,1,Robu.in,38.00,38.00
+13,3S Li-ion / LiPo Balance Fast Charger,1,Robu.in,12.00,12.00
+14,12V to 5V 10A High-Current Step-Down Buck Converter,1,Robu.in / Amazon,12.00,12.00
+15,M3/M2.5 Fastener Assortment + Brass Heat-Set Thread Inserts,1,MakerBazar,18.00,18.00
+16,High-Strength PETG 3D Printer Filament (1kg Spool),2,Numakers / Amazon India,14.00,28.00
+17,Panel-Mount Emergency Push-Latch Power Cutoff Switch,1,Robu.in,6.00,6.00
+18,Domestic Shipping & Logistics Allowance (Robu.in / MakerBazar),3,Combined Vendor Shipping,6.00,18.00
+,,,,Total:,577.00
